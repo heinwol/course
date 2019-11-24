@@ -13,6 +13,13 @@ from IPython.display import Latex
 xpr = parse_expr
 
 
+def grad(f, elts):
+    nabla_f = sp.Matrix([0]*len(elts)).T
+    # sp.transpose(nabla_f)
+    for i in range(len(elts)):
+        nabla_f[i] = sp.diff(f, elts[i])
+    return nabla_f
+
 class Eqn(sp.Eq):
     def __new__(cls, *args, **kwargs):
         instance = super(Eqn, cls).__new__(cls, *args, **kwargs)
