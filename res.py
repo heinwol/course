@@ -20,6 +20,15 @@ def grad(f, elts):
         nabla_f[i] = sp.diff(f, elts[i])
     return nabla_f
 
+
+def Jacobi(F, elts):
+    J = sp.Matrix([[0]*len(elts)]*len(F))
+    for i in range(len(F)):
+        gr = grad(F[i], elts)
+        for j in range(len(elts)):
+            J[i, j] = gr[j]
+    return J
+
 class Eqn(sp.Eq):
     def __new__(cls, *args, **kwargs):
         instance = super(Eqn, cls).__new__(cls, *args, **kwargs)
