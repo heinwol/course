@@ -13089,7 +13089,7 @@ div#notebook {
 <div class="output_html rendered_html output_subarea ">
 <style>
 .output {
-    font-size:18pt !important;
+    font-size:14pt !important;
 }
 .prompt {
     min-width:unset !important;
@@ -13098,7 +13098,10 @@ div#notebook {
     overflow-x:unset !important;
 }
 .MathJax {
-    font-size: 1.0em;
+    font-size: 0.85em;
+# .td {
+#   font-size: 150px !important;
+# }
 }
 </style>
 
@@ -13124,7 +13127,7 @@ div#notebook {
 
 
 <div class="output_latex output_subarea ">
-$\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{0} x_{3}}{K_{c} - x_{2} + 1} + x_{0}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{0}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{1}\right)\\- \lambda_{p} x_{1} + x_{1} \left(1 - \frac{x_{1}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{0}}{K_{p} + x_{0}}\right)\\k_{r} - x_{2} \left(\gamma_{c} x_{0} + \gamma_{p} x_{1} + \lambda_{r}\right)\\\frac{k_{t} x_{2}}{K_{t} - x_{2} + 1} - \lambda_{t} x_{3}\end{matrix}\right]$
+$\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{1} x_{4}}{K_{c} - x_{3} + 1} + x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{2}\right)\\- \lambda_{p} x_{2} + x_{2} \left(1 - \frac{x_{2}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{1}}{K_{p} + x_{1}}\right)\\k_{r} - x_{3} \left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right)\\\frac{k_{t} x_{3}}{K_{t} - x_{3} + 1} - \lambda_{t} x_{4}\end{matrix}\right]$
 </div>
 
 </div>
@@ -13136,215 +13139,87 @@ $\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{0} x_{3}}{K_{c} - x_{2
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p>Докажем инвариантность первого октанта, для этого рассмотрим отдельно все координатные плоскости.</p>
-<p>Положим $x_0 = 0:$</p>
-
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>%%markdown
+Докажем инвариантность первого октанта, для этого рассмотрим отдельно все координатные плоскости.</p>
+<p>Положим $x_1 = 0:$</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_latex output_subarea ">
-$\displaystyle \left[\begin{matrix}0\\k_{p} x_{1} \left(1 - \frac{x_{1}}{P_{0}}\right) - \lambda_{p} x_{1}\\k_{r} - x_{2} \left(\gamma_{p} x_{1} + \lambda_{r}\right)\\\frac{k_{t} x_{2}}{K_{t} - x_{2} + 1} - \lambda_{t} x_{3}\end{matrix}\right]$
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>F_new = F.subs(x[1], 0)
+display(F_new)</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p>$x_1 = 0:$</p>
-
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>%%markdown
+$x_2 = 0:$</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_latex output_subarea ">
-$\displaystyle \left[\begin{matrix}k_{c} x_{0}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{0}}{C_{0}}}\right) - \frac{\lambda_{c} x_{0} x_{3}}{K_{c} - x_{2} + 1}\\0\\k_{r} - x_{2} \left(\gamma_{c} x_{0} + \lambda_{r}\right)\\\frac{k_{t} x_{2}}{K_{t} - x_{2} + 1} - \lambda_{t} x_{3}\end{matrix}\right]$
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>F_new = F.subs(x[2], 0)
+display(F_new)</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p>$x_2 = 0:$</p>
-
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>%%markdown
+$x_3 = 0:$</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_latex output_subarea ">
-$\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{0} x_{3}}{K_{c} + 1} + x_{0}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{0}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{1}\right)\\- \lambda_{p} x_{1} + x_{1} \left(1 - \frac{x_{1}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{0}}{K_{p} + x_{0}}\right)\\k_{r}\\- \lambda_{t} x_{3}\end{matrix}\right]$
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>F_new = F.subs(x[3], 0)
+display(F_new)</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p>$x_3 = 0:$</p>
-
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>%%markdown
+$x_4 = 0:$</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_latex output_subarea ">
-$\displaystyle \left[\begin{matrix}x_{0}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{0}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{1}\right)\\- \lambda_{p} x_{1} + x_{1} \left(1 - \frac{x_{1}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{0}}{K_{p} + x_{0}}\right)\\k_{r} - x_{2} \left(\gamma_{c} x_{0} + \gamma_{p} x_{1} + \lambda_{r}\right)\\\frac{k_{t} x_{2}}{K_{t} - x_{2} + 1}\end{matrix}\right]$
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>F_new = F.subs(x[4], 0)
+display(F_new)</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <hr>
-<p>Пока что оставим этот вопрос и попробуем найти положение равновесия:</p>
-
-</div>
-
-</div>
-
+<h3 id="&#1055;&#1086;&#1087;&#1088;&#1086;&#1073;&#1091;&#1077;&#1084;-&#1085;&#1072;&#1081;&#1090;&#1080;-&#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077;-&#1088;&#1072;&#1074;&#1085;&#1086;&#1074;&#1077;&#1089;&#1080;&#1103;:">&#1055;&#1086;&#1087;&#1088;&#1086;&#1073;&#1091;&#1077;&#1084; &#1085;&#1072;&#1081;&#1090;&#1080; &#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077; &#1088;&#1072;&#1074;&#1085;&#1086;&#1074;&#1077;&#1089;&#1080;&#1103;:<a class="anchor-link" href="#&#1055;&#1086;&#1087;&#1088;&#1086;&#1073;&#1091;&#1077;&#1084;-&#1085;&#1072;&#1081;&#1090;&#1080;-&#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077;-&#1088;&#1072;&#1074;&#1085;&#1086;&#1074;&#1077;&#1089;&#1080;&#1103;:">&#182;</a></h3>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -13360,7 +13235,7 @@ $\displaystyle \left[\begin{matrix}x_{0}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{
 
 
 <div class="output_latex output_subarea ">
-$\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{0} x_{3}}{K_{c} - x_{2} + 1} + x_{0}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{0}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{1}\right) = 0\\- \lambda_{p} x_{1} + x_{1} \left(1 - \frac{x_{1}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{0}}{K_{p} + x_{0}}\right) = 0\\k_{r} - x_{2} \left(\gamma_{c} x_{0} + \gamma_{p} x_{1} + \lambda_{r}\right) = 0\\\frac{k_{t} x_{2}}{K_{t} - x_{2} + 1} - \lambda_{t} x_{3} = 0\end{matrix}\right]$
+$\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{1} x_{4}}{K_{c} - x_{3} + 1} + x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{2}\right) = 0\\- \lambda_{p} x_{2} + x_{2} \left(1 - \frac{x_{2}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{1}}{K_{p} + x_{1}}\right) = 0\\k_{r} - x_{3} \left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right) = 0\\\frac{k_{t} x_{3}}{K_{t} - x_{3} + 1} - \lambda_{t} x_{4} = 0\end{matrix}\right]$
 </div>
 
 </div>
@@ -13368,6 +13243,53 @@ $\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{0} x_{3}}{K_{c} - x_{2
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1053;&#1072;&#1081;&#1076;&#1077;&#1084;-&#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;-&#1088;&#1072;&#1074;&#1085;&#1086;&#1074;&#1077;&#1089;&#1080;&#1103;-&#1074;-&#1082;&#1086;&#1086;&#1088;&#1076;&#1080;&#1085;&#1072;&#1090;&#1085;&#1099;&#1093;-&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1103;&#1093;-&#1080;-$\{x_3-=-1\}$">&#1053;&#1072;&#1081;&#1076;&#1077;&#1084; &#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103; &#1088;&#1072;&#1074;&#1085;&#1086;&#1074;&#1077;&#1089;&#1080;&#1103; &#1074; &#1082;&#1086;&#1086;&#1088;&#1076;&#1080;&#1085;&#1072;&#1090;&#1085;&#1099;&#1093; &#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1103;&#1093; &#1080; $\{x_3 = 1\}$<a class="anchor-link" href="#&#1053;&#1072;&#1081;&#1076;&#1077;&#1084;-&#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;-&#1088;&#1072;&#1074;&#1085;&#1086;&#1074;&#1077;&#1089;&#1080;&#1103;-&#1074;-&#1082;&#1086;&#1086;&#1088;&#1076;&#1080;&#1085;&#1072;&#1090;&#1085;&#1099;&#1093;-&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1103;&#1093;-&#1080;-$\{x_3-=-1\}$">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="I)--$x_1-=-0$">I)  $x_1 = 0$<a class="anchor-link" href="#I)--$x_1-=-0$">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle \left[\begin{matrix}\text{True}\\k_{p} x_{2} \left(1 - \frac{x_{2}}{P_{0}}\right) - \lambda_{p} x_{2} = 0\\k_{r} - x_{3} \left(\gamma_{p} x_{2} + \lambda_{r}\right) = 0\\\frac{k_{t} x_{3}}{K_{t} - x_{3} + 1} - \lambda_{t} x_{4} = 0\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\phantom{tab}$ а) $x_2 \neq 0 \Rightarrow (3) \Rightarrow x_3 = \dfrac{k_r}{\lambda_r} &lt; 1, \;
+\text{по крайней мере, если подставить значения из приложения.}$ <br>
+$ \text{Тогда}\; (4) \Rightarrow x_4 = \dfrac{k_t k_r}{\lambda_t(\lambda_r K_t + \lambda_r - k_r)}. \text{}$</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
