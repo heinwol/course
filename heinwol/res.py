@@ -13,7 +13,7 @@ from IPython.display import Latex
 xpr = parse_expr
 
 
-def grad(f, elts):
+def grad(f, *elts):
     nabla_f = sp.Matrix([0]*len(elts)).T
     # sp.transpose(nabla_f)
     for i in range(len(elts)):
@@ -21,7 +21,7 @@ def grad(f, elts):
     return nabla_f
 
 
-def Jacobi(F, elts):
+def Jacobi(F, *elts):
     J = sp.Matrix([[0]*len(elts)]*len(F))
     for i in range(len(F)):
         gr = grad(F[i], elts)
