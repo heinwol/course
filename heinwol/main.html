@@ -13089,7 +13089,7 @@ div#notebook {
 <div class="output_html rendered_html output_subarea ">
 <style>
 .output {
-    font-size:14pt !important;
+    font-size:15pt !important;
 }
 .prompt {
     min-width:unset !important;
@@ -13290,12 +13290,191 @@ $\displaystyle \left[\begin{matrix}\text{True}\\k_{p} x_{2} \left(1 - \frac{x_{2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$\phantom{tab}$ а) $x_2 \neq 0 \Rightarrow (3) \Rightarrow x_3 = \dfrac{k_r}{\lambda_r} &lt; 1, \;
+<p>$\phantom{tab}$ а) $x_2 = 0 \Rightarrow (3) \Rightarrow x_3 = \dfrac{k_r}{\lambda_r} &lt; 1, \;
 \text{по крайней мере, если подставить значения из приложения.}$ <br>
-$ \text{Тогда}\; (4) \Rightarrow x_4 = \dfrac{k_t k_r}{\lambda_t(\lambda_r K_t + \lambda_r - k_r)}. \text{}$</p>
+$ \text{Тогда}\; (4) \Rightarrow x_4 = \dfrac{k_t k_r}{\lambda_t(\lambda_r K_t + \lambda_r - k_r)}. \text{}$ <br>
+$\phantom{tab}$ б) $x_2 \neq 0 \Rightarrow$</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$(2) \Rightarrow x_2 = \frac{P_{0} \left(k_{p} - \lambda_{p}\right)}{k_{p}} \;\; (*);$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$(3),(*) \Rightarrow x_3 = \frac{k_{p} k_{r}}{P_{0} \gamma_{p} \left(k_{p} - \lambda_{p}\right) + k_{p} \lambda_{r}} \;\; (**);$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$(4),(**) \Rightarrow x_3 = \frac{k_{p} k_{r} k_{t}}{\lambda_{t} \left(- k_{p} k_{r} + \left(K_{t} + 1\right) \left(P_{0} \gamma_{p} \left(k_{p} - \lambda_{p}\right) + k_{p} \lambda_{r}\right)\right)}.$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Мы нашли все 2 положения равновесия в первой координатной плоскости.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$x_2 = 0:$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle \left[\begin{matrix}k_{c} x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) - \frac{\lambda_{c} x_{1} x_{4}}{K_{c} - x_{3} + 1} = 0\\\text{True}\\k_{r} - x_{3} \left(\gamma_{c} x_{1} + \lambda_{r}\right) = 0\\\frac{k_{t} x_{3}}{K_{t} - x_{3} + 1} - \lambda_{t} x_{4} = 0\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$(3) \Rightarrow x_3 = \frac{k_{r}}{\gamma_{c} x_{1} + \lambda_{r}} \;\; (*);$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$(4),(*) \Rightarrow x_4 = \frac{k_{r} k_{t}}{\lambda_{t} \left(- k_{r} + \left(K_{t} + 1\right) \left(\gamma_{c} x_{1} + \lambda_{r}\right)\right)};$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Подставив в (1), получим:
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle k_{c} x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) - \frac{k_{r} k_{t} \lambda_{c} x_{1}}{\lambda_{t} \left(- k_{r} + \left(K_{t} + 1\right) \left(\gamma_{c} x_{1} + \lambda_{r}\right)\right) \left(K_{c} - \frac{k_{r}}{\gamma_{c} x_{1} + \lambda_{r}} + 1\right)} = 0$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Полагая $x_1 \neq 0$ (данный случай уже рассмотрен) , разделим на $x_1^{\frac{3}{4}}$ <br>
+Затем, осуществив замену $x_1 = y^4$, а также приведя все дроби к общему знаменателю, получим эквивалентное уравнение:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$- \sqrt[4]{C_{0}} k_{r} k_{t} \lambda_{c} y \left(\gamma_{c} y^{4} + \lambda_{r}\right) + k_{c} \lambda_{t} \left(\sqrt[4]{C_{0}} - y\right) \left(- k_{r} + \left(K_{c} + 1\right) \left(\gamma_{c} y^{4} + \lambda_{r}\right)\right) \left(- k_{r} + \left(K_{t} + 1\right) \left(\gamma_{c} y^{4} + \lambda_{r}\right)\right) = 0$
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -13327,6 +13506,17 @@ $x_3 = 0:$
 $\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{1} x_{4}}{K_{c} + 1} + x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{2}\right) = 0\\- \lambda_{p} x_{2} + x_{2} \left(1 - \frac{x_{2}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{1}}{K_{p} + x_{1}}\right) = 0\\k_{r} = 0\\- \lambda_{t} x_{4} = 0\end{matrix}\right]$
 </div>
 
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>То есть нет решений в 3-ей координатной плоскости
+</pre>
+</div>
 </div>
 
 </div>
@@ -13365,19 +13555,264 @@ $\displaystyle \left[\begin{matrix}x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Аналогично, нет решений в 4-ой координатной плоскости
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$x_3 = 1:$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle \left[\begin{matrix}x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{2}\right) - \frac{\lambda_{c} x_{1} x_{4}}{K_{c}} = 0\\- \lambda_{p} x_{2} + x_{2} \left(1 - \frac{x_{2}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{1}}{K_{p} + x_{1}}\right) = 0\\- \gamma_{c} x_{1} - \gamma_{p} x_{2} + k_{r} - \lambda_{r} = 0\\- \lambda_{t} x_{4} + \frac{k_{t}}{K_{t}} = 0\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+Второе уравнение:
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle - \lambda_{p} x_{2} + x_{2} \left(1 - \frac{x_{2}}{P_{0}}\right) \left(k_{p} + \frac{\mu_{p} x_{1}}{K_{p} + x_{1}}\right) = 0$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle \frac{x_{2} \left(- P_{0} \lambda_{p} \left(K_{p} + x_{1}\right) + \left(P_{0} - x_{2}\right) \left(k_{p} \left(K_{p} + x_{1}\right) + \mu_{p} x_{1}\right)\right)}{P_{0} \left(K_{p} + x_{1}\right)} = 0$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+а) Положим $x_2 = 0$, поскольку решение аналогичной задачи поиска ПР в плоскости $x_2=0$ привела к многочлену 9-й степени и пока не была решена
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle \left[\begin{matrix}k_{c} x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) - \frac{\lambda_{c} x_{1} x_{4}}{K_{c}} = 0\\\text{True}\\- \gamma_{c} x_{1} + k_{r} - \lambda_{r} = 0\\- \lambda_{t} x_{4} + \frac{k_{t}}{K_{t}} = 0\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+Выразим $x_1$ и $x_4$ из третьего и четвертого уравнений:
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle x_{1} = \frac{k_{r} - \lambda_{r}}{\gamma_{c}}$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle x_{4} = \frac{k_{t}}{K_{t} \lambda_{t}}$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+Проверим, выполняется ли при этом первое уравнение
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle - \frac{K_{c} K_{t} \gamma_{c} k_{c} \lambda_{t} \left(\frac{k_{r} - \lambda_{r}}{\gamma_{c}}\right)^{\frac{3}{4}} \left(\sqrt[4]{\frac{k_{r} - \lambda_{r}}{C_{0} \gamma_{c}}} - 1\right) + k_{t} \lambda_{c} \left(k_{r} - \lambda_{r}\right)}{K_{c} K_{t} \gamma_{c} \lambda_{t}}$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+б) Пусть $x_2 \neq 0$. Тогда разделим на $x_2$ второе уравнение системы $F_{\big|x_3 = 1}$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle \left[\begin{matrix}x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{2}\right) - \frac{\lambda_{c} x_{1} x_{4}}{K_{c}} = 0\\\frac{- P_{0} \lambda_{p} \left(K_{p} + x_{1}\right) + \left(P_{0} - x_{2}\right) \left(k_{p} \left(K_{p} + x_{1}\right) + \mu_{p} x_{1}\right)}{P_{0} \left(K_{p} + x_{1}\right)} = 0\\- \gamma_{c} x_{1} - \gamma_{p} x_{2} + k_{r} - \lambda_{r} = 0\\- \lambda_{t} x_{4} + \frac{k_{t}}{K_{t}} = 0\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\displaystyle \left[\begin{matrix}x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\frac{x_{1}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{2}\right) - \frac{k_{t} \lambda_{c} x_{1}}{K_{c} K_{t} \lambda_{t}} = 0\\- P_{0} \lambda_{p} \left(K_{p} + x_{1}\right) + \left(P_{0} - x_{2}\right) \left(k_{p} \left(K_{p} + x_{1}\right) + \mu_{p} x_{1}\right) = 0\\- \gamma_{c} x_{1} - \gamma_{p} x_{2} + k_{r} - \lambda_{r} = 0\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+Система не имеет решений. Из первого уравнения $x_2$ выражается как:  $x_2 = \phi(x_1^{\frac{3}{4}})$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+Видно, что это не удовлетворяет последнему уравнению системы. Таким образом, нет ПР в плоскости $x_3 = 1$
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Рассмотрим пары координатных функций по переменным $x_3$ и $x_4$ <br>
-Вернемся для этого к уравнению $F(x_1,x_2,x_3,x_4) = 0.$ Заметим, что (3) и (4)
-допускают явное выражение переменных $x_3$ и $x_4$ через $x_1$ и $x_2$</p>
+<h2 id="&#1050;&#1086;&#1086;&#1088;&#1076;&#1080;&#1085;&#1072;&#1090;&#1085;&#1099;&#1077;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#1050;&#1086;&#1086;&#1088;&#1076;&#1080;&#1085;&#1072;&#1090;&#1085;&#1099;&#1077; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1050;&#1086;&#1086;&#1088;&#1076;&#1080;&#1085;&#1072;&#1090;&#1085;&#1099;&#1077;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Рассмотрим координатные функции вида $\varphi_i = x_i\,,\; i = \overline{1,4}$ <br>
+Вернемся для этого к уравнению $F(x_1,x_2,x_3,x_4) = 0:$</p>
 
 </div>
 </div>
@@ -13404,6 +13839,81 @@ $\displaystyle \left[\begin{matrix}- \frac{\lambda_{c} x_{1} x_{4}}{K_{c} - x_{3
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Для первой координатной функции имеем: <br>
+$$ S_{\varphi_1} = \{ x_1 = 0\}\, \cup \, 
+\left\{ x_1 = 
+\frac{C_{0} \alpha^{4}{\left(x_{2},x_{3} \right)}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \alpha{\left(x_{2},x_{3} \right)}\right)^{4}}
+\right\} $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$$ \text{Явное выражение для } x_1: $$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$ x_1 = \frac{C_{0} \alpha^{4}{\left(x_{2},x_{3} \right)}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \alpha{\left(x_{2},x_{3} \right)}\right)^{4}}$, где $\alpha = \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right) > 0$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\nabla \varphi_1 = \left[\begin{matrix}\frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \mu_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{3} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} & - \frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{3}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} & - \frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}}\end{matrix}\right] $
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Отсюда видно, что градиент ни в какой точке не обращается в нуль, потому что любая компонента нигде не ноль, поскольку 
+$\alpha &gt; 0.$ <br>
+Конкретнее, $\dfrac{\partial \varphi_1}{\partial x_2} &gt; 0,\,
+             \dfrac{\partial \varphi_1}{\partial x_3} &lt; 0,\,
+             \dfrac{\partial \varphi_1}{\partial x_4} &lt; 0.$
+<br>
+Очевидно, $\varphi_{3 \min} = 0$ (при $x_1 = 0$). Для установления супремума воспользуемся знаниями частных производных: значение будет тем больше, чем меньше $x_3$ и $x_4$ и чем больше $x_2$. Положив $x_3 = x_4 = 0$, получим $x_1 = C_0 \Rightarrow \varphi_{1 \max} = C_0$</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -13432,7 +13942,20 @@ $ \text{Явное выражение для } x_3: $
 
 
 <div class="output_latex output_subarea ">
-$ x_3 = \left( \frac{k_{r}}{\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}}\right)$
+$$ x_3 = \frac{k_{r}}{\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}}$$
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_latex output_subarea ">
+$\nabla x_3 = \left[\begin{matrix}- \frac{\gamma_{c} k_{r}}{\left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right)^{2}} & - \frac{\gamma_{p} k_{r}}{\left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right)^{2}}\end{matrix}\right] $
 </div>
 
 </div>
@@ -13440,6 +13963,16 @@ $ x_3 = \left( \frac{k_{r}}{\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}}\r
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Очевидно, что никогда не выполняется $\nabla x_3 = 0\,$ (раз все $x$ неотрицательны), так что функция $\varphi_3(\vec{x}) = x_3$ достигает своих экстремальных значений (на универсальном сечении) лишь на границе, либо не достигает их вовсе. <br>
+Действительно, видно, что достигается максимум при $x_1 = x_2 = 0,$ при этом $\varphi_{3 \max} = \dfrac{k_r}{\lambda_r}$ <br>
+А вот минимального значения $\varphi_3$ не достигает, но $\varphi_{3 \inf} = 0$, очевидно.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -13468,20 +14001,10 @@ $ \text{Явное выражение для } x_4: $
 
 
 <div class="output_latex output_subarea ">
-$ x_4 = \left( \frac{k_{r} k_{t}}{\lambda_{t} \left(K_{t} \gamma_{c} x_{1} + K_{t} \gamma_{p} x_{2} + K_{t} \lambda_{r} + \gamma_{c} x_{1} + \gamma_{p} x_{2} - k_{r} + \lambda_{r}\right)}\right)$
+$$ x_4 = \frac{k_{t} x_{3}}{\lambda_{t} \left(K_{t} - x_{3} + 1\right)}$$
 </div>
 
 </div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
 
 <div class="output_area">
 
@@ -13491,7 +14014,7 @@ $ x_4 = \left( \frac{k_{r} k_{t}}{\lambda_{t} \left(K_{t} \gamma_{c} x_{1} + K_{
 
 
 <div class="output_latex output_subarea ">
-$\nabla x_3 = \left( \left[\begin{matrix}- \frac{\gamma_{c} k_{r}}{\left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right)^{2}} & - \frac{\gamma_{p} k_{r}}{\left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right)^{2}}\end{matrix}\right]\right) $
+$x_4' = \frac{k_{t} x_{3}}{\lambda_{t} \left(K_{t} - x_{3} + 1\right)^{2}} + \frac{k_{t}}{\lambda_{t} \left(K_{t} - x_{3} + 1\right)} $
 </div>
 
 </div>
@@ -13503,44 +14026,21 @@ $\nabla x_3 = \left( \left[\begin{matrix}- \frac{\gamma_{c} k_{r}}{\left(\gamma_
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Очевидно, что никогда не выполняется $\nabla x_3 = 0\,$ (раз все $x$ неотрицательны), так что функция $\varphi_3(\vec{x}) = x_3$ достигает своих экстремальных значений (на универсальном сечении) лишь на границе, либо не достигает их вовсе. <br>
-Действительно, видно, что достигается максимум при $x_1 = x_2 = 0,$ при этом $\varphi_{3 \max} = \dfrac{k_r}{\lambda_r}$ <br>
-А вот минимального значения $\varphi_3$ не достигает, но $\varphi_{3 \inf} = 0$, очевидно. <br>
-Аналогично дела обстоят с $\varphi_4$:</p>
+<p>Приходим к выводу, что $\varphi_{4 \min} = 0$ (достигается при $x_3 = 0$), а максимум достигается при 
+$x_3 = 1,\varphi_{4 \max} = \dfrac{k_t}{\lambda_t K_t} $</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1055;&#1086;&#1089;&#1090;&#1088;&#1086;&#1077;&#1085;&#1080;&#1077;-&#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1083;&#1086;&#1082;&#1072;&#1083;&#1080;&#1079;&#1091;&#1102;&#1097;&#1080;&#1093;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1081;-&#1080;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;">&#1055;&#1086;&#1089;&#1090;&#1088;&#1086;&#1077;&#1085;&#1080;&#1077; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080; &#1083;&#1086;&#1082;&#1072;&#1083;&#1080;&#1079;&#1091;&#1102;&#1097;&#1080;&#1093; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1081; &#1080; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;<a class="anchor-link" href="#&#1055;&#1086;&#1089;&#1090;&#1088;&#1086;&#1077;&#1085;&#1080;&#1077;-&#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1083;&#1086;&#1082;&#1072;&#1083;&#1080;&#1079;&#1091;&#1102;&#1097;&#1080;&#1093;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1081;-&#1080;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_latex output_subarea ">
-$\nabla x_4 = \left( \left[\begin{matrix}\frac{k_{r} k_{t} \left(- K_{t} \gamma_{c} - \gamma_{c}\right)}{\lambda_{t} \left(K_{t} \gamma_{c} x_{1} + K_{t} \gamma_{p} x_{2} + K_{t} \lambda_{r} + \gamma_{c} x_{1} + \gamma_{p} x_{2} - k_{r} + \lambda_{r}\right)^{2}} & \frac{k_{r} k_{t} \left(- K_{t} \gamma_{p} - \gamma_{p}\right)}{\lambda_{t} \left(K_{t} \gamma_{c} x_{1} + K_{t} \gamma_{p} x_{2} + K_{t} \lambda_{r} + \gamma_{c} x_{1} + \gamma_{p} x_{2} - k_{r} + \lambda_{r}\right)^{2}}\end{matrix}\right]\right) $
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Приходим к выводу, что $\varphi_{4 \inf} = 0$, а</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 

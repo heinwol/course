@@ -60,4 +60,7 @@ class Eqn(sp.Eq):
         return Eqn(left, right)
 
 def flatex(text: str, *args):
-    return Latex(text.format(sp.latex(args, mode='plain')))
+    form_text = []
+    for arg in args:
+        form_text.append(sp.latex(arg, mode='plain'))
+    return Latex(text.format(*form_text))
