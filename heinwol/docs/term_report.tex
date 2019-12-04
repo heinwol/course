@@ -1,0 +1,187 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\usepackage{cmap}
+\usepackage{hyperref}
+
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{graphicx}
+
+\singlespacing
+
+\oddsidemargin=-1cm
+\textwidth=18.0cm
+\topmargin=-1.54cm%0pt
+\textheight=24cm
+
+%%%%%%%%%%%%%%%%%%% BEGINNING %%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \large Координатные функции и первые координатные множества
+\end{center}
+\begin{flushright}
+    Корешков Василий, 04.12.19
+\end{flushright}
+
+{\large Система имеет следующий вид:}
+
+\begin{equation}
+    \left\{
+    \begin{matrix*}[l]
+    \dot{x}_1 & = & - \dfrac{\lambda_{c} x_{0} x_{3}}{K_{c} - x_{2} + 1} + x_{0}^{3/4} \left(1 - \sqrt[4]{\dfrac{x_{0}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{1}\right)
+    \\
+    \dot{x}_2 & = & - \lambda_{p} x_{1} + x_{1} \left(1 - \dfrac{x_{1}}{P_{0}}\right) \left(k_{p} + \dfrac{\mu_{p} x_{0}}{K_{p} + x_{0}}\right)
+    \\
+    \dot{x}_3 & = & k_{r} - x_{2} \left(\gamma_{c} x_{0} + \gamma_{p} x_{1} + \lambda_{r}\right)
+    \\
+    \dot{x}_4 & = & \dfrac{k_{t} x_{2}}{K_{t} - x_{2} + 1} - \lambda_{t} x_{3}
+    \end{matrix*}
+    \right.
+\end{equation}
+
+\subsection{Координатные функции}
+
+Рассмотрим координатные функции вида
+\(\varphi_i = x_i\,,\; i = \overline{1,4}.\) Вернемся для этого к
+уравнению \(F(x_1,x_2,x_3,x_4) = 0:\)
+
+
+\begin{equation*}
+    \left\{
+        \begin{matrix*}[r]
+            - \dfrac{\lambda_{c} x_{1} x_{4}}{K_{c} - x_{3} + 1} + x_{1}^{\frac{3}{4}} \left(1 - \sqrt[4]{\dfrac{x_{1}}{C_{0}}}\right) \left(k_{c} + \mu_{c} x_{2}\right) &=& 0
+            \\
+            - \lambda_{p} x_{2} + x_{2} \left(1 - \dfrac{x_{2}}{P_{0}}\right) \left(k_{p} + \dfrac{\mu_{p} x_{1}}{K_{p} + x_{1}}\right) &=&  0
+            \\
+            k_{r} - x_{3} \left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right) &=& 0
+            \\
+            \dfrac{k_{t} x_{3}}{K_{t} - x_{3} + 1} - \lambda_{t} x_{4} &=& 0
+        \end{matrix*}
+    \right.
+\end{equation*}
+
+\begin{enumerate}
+    
+    \item Для первой координатной функции имеем:
+    \[ S_{\varphi_1} = \{ x_1 = 0\}\, \cup \, 
+    \left\{ x_1 = 
+    \frac{C_{0} \alpha^{4}{\left(x_{2},x_{3} \right)}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \alpha{\left(x_{2},x_{3} \right)}\right)^{4}}
+    \right\} \]
+
+    Явное выражение для $x_1$:
+
+        
+        $$ x_1 = \frac{C_{0} \alpha^{4}{\left(x_{2},x_{3} \right)}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \alpha{\left(x_{2},x_{3} \right)}\right)^{4}},\, \text{где}\, \alpha = \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right) > 0$$
+
+        
+        $$\nabla \varphi_1 = \left(
+            \begin{matrix}\dfrac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \mu_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{3} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} 
+            \\
+            - \dfrac{4 C_{0}^{\frac{5}{4}} \lambda_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{3}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} 
+            \\
+            - \dfrac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}}
+            \end{matrix}\right)^T $$
+
+    Отсюда видно, что градиент ни в какой точке не обращается в нуль, потому что любая компонента нигде не ноль, поскольку \(\alpha > 0.\)
+    Конкретнее,
+    \(\dfrac{\partial \varphi_1}{\partial x_2} > 0,\,  \dfrac{\partial \varphi_1}{\partial x_3} < 0,\,  \dfrac{\partial \varphi_1}{\partial x_4} < 0.\)
+    Очевидно, \(\varphi_{3 \min} = 0\) (при \(x_1 = 0\)). Для установления
+    супремума воспользуемся знаниями частных производных: значение будет тем
+    больше, чем меньше \(x_3\) и \(x_4\) и чем больше \(x_2\). Положив
+    \(x_3 = x_4 = 0\), получим
+    \(x_1 = C_0 \Rightarrow \varphi_{1 \max} = C_0\)
+
+    \item Для второй координатной функции:
+    \[ S_{\varphi_2} = \{ x_2 = 0\}\, \cup \, 
+    \left\{ x_2 = 
+    \dfrac{P_{0} \left(K_{p} k_{p} - K_{p} \lambda_{p} + x_{1} \left(k_{p} - \lambda_{p} + \mu_{p}\right)\right)}{- K_{p} k_{p} + x_{1} \left(k_{p} + \mu_{p}\right)}
+    \right\} \]
+    
+    Явное выражение для $x_2$:
+    
+        
+        $$ x_2 = \frac{P_{0} \left(K_{p} k_{p} - K_{p} \lambda_{p} + x_{1} \left(k_{p} - \lambda_{p} + \mu_{p}\right)\right)}{- K_{p} k_{p} + x_{1} \left(k_{p} + \mu_{p}\right)}$$
+    
+        
+        $$ x_2' = - P_{0}\dfrac{ \left(\left(k_{p} + \mu_{p}\right) \left(K_{p} k_{p} - K_{p} \lambda_{p} + x_{1} \left(k_{p} - \lambda_{p} + \mu_{p}\right)\right) + \left(K_{p} k_{p} - x_{1} \left(k_{p} + \mu_{p}\right)\right) \left(k_{p} - \lambda_{p} + \mu_{p}\right)\right)}{\left(K_{p} k_{p} - x_{1} \left(k_{p} + \mu_{p}\right)\right)^{2}} $$
+    
+        
+        А точнее, $ x_2' = K_p P_0  \dfrac{k_p\lambda_p + (k_p + \mu_p)(\lambda_p - 2k_p)}{\left( K_p  k_p - x_1 \left(k_p + \mu_p\right)\right)^{2}}  $
+    
+    Таким образом, в зависимости от параметров, производная либо строго
+    меньше нуля, либо больше, либо функция постоянна. В любом случае,
+    экстремальные значения будут достигаться на границе.
+    
+    \(\varphi_2(0) = P_0 \left( \frac{\lambda_p}{k_p} - 1\right);  \varphi_2(+\!\infty) = 1 - \frac{\lambda_p}{k_p + \mu_p}\;\)
+    (на универсальном сечении, очевидно, \(\varphi_2\) является функцией
+    только \(x_1\)). 
+
+
+
+    \item Явное выражение для $x_3$:
+
+        
+        $$ x_3 = \frac{k_{r}}{\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}}$$
+
+        
+        $$
+        \nabla \varphi_3 = \left(\begin{matrix}- \dfrac{\gamma_{c} k_{r}}{\left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right)^{2}} 
+        &
+        - \dfrac{\gamma_{p} k_{r}}{\left(\gamma_{c} x_{1} + \gamma_{p} x_{2} + \lambda_{r}\right)^{2}}\end{matrix}\right) 
+        $$
+
+        
+    Очевидно, что никогда не выполняется \(\nabla x_3 = 0\,\) (раз все \(x\) неотрицательны), так что функция \(\varphi_3(\vec{x}) = x_3\) достигает своих экстремальных значений (на универсальном сечении) лишь на границе, либо не достигает их вовсе. Действительно, видно, что достигается максимум при \(x_1 = x_2 = 0,\) при этом \(\varphi_{3 \max} = \dfrac{k_r}{\lambda_r}\) А вот минимального значения \(\varphi_3\) не достигает, но \(\varphi_{3 \inf} = 0\), очевидно.
+
+    \item Явное выражение для $x_4$:
+
+        
+        $$ x_4 = \frac{k_{t} x_{3}}{\lambda_{t} \left(K_{t} - x_{3} + 1\right)}$$
+
+        
+        $$x_4' = \dfrac{k_{t} x_{3}}{\lambda_{t} \left(K_{t} - x_{3} + 1\right)^{2}} + \dfrac{k_{t}}{\lambda_{t} \left(K_{t} - x_{3} + 1\right)} $$
+
+        
+        Приходим к выводу, что \(\varphi_{4 \min} = 0\) (достигается при
+    \(x_3 = 0\)), а максимум достигается при $x_3 = 1,\varphi_{4 \max}
+    = \dfrac{k_t}{\lambda_t K_t} $
+
+\end{enumerate}
+
+\subsection{Построение последовательности локализующих функций и множеств}
+
+Мы смогли получить все 4 координатные функции. Каждая координатная
+функция определяет, таким образом, соответствующее локализующее
+множество \(\Omega_i\), полученное из \(\overline{\mathbb{R}_{+}^{4}}\)
+следующим образом (далее всюду подразумеваются подмножества
+\(\overline{\mathbb{R}_{+}^{4}}\)):
+
+\begin{equation*}    
+    \begin{matrix}
+    \Omega_1 = \left\{
+            x \;|\; x_1 \in \left[ 0, C_0  \right]
+                \right\};
+    &
+    \Omega_2 = \left\{
+            x \;|\; x_2 \in \left[ \varphi_{2 \inf}, \varphi_{2 \sup}  \right] \vee x_2 = 0
+                \right\}
+    \\ \\
+    \Omega_3 = \left\{
+        x \;|\; x_3 \in \left[ 0, \dfrac{k_r}{\lambda_r}  \right]
+            \right\};
+    &
+    \Omega_4 = \left\{
+        x \;|\; x_3 \in \left[ 0, \dfrac{k_t}{\lambda_t K_t} \right]
+            \right\};
+    \end{matrix}
+\end{equation*}
+
+
+\end{document}

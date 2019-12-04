@@ -558,7 +558,7 @@
     $ x_1 = \frac{C_{0} \alpha^{4}{\left(x_{2},x_{3} \right)}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \alpha{\left(x_{2},x_{3} \right)}\right)^{4}}$, где $\alpha = \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right) > 0$
 
     
-    $\nabla \varphi_1 = \left[\begin{matrix}\frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \mu_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{3} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} & - \frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{3}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} & - \frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}}\end{matrix}\right] $
+    $\nabla x_1 = \left[\begin{matrix}\frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \mu_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{3} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} & - \frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} x_{4} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{3}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}} & - \frac{4 C_{0}^{\frac{5}{4}} \lambda_{c} \left(k_{c} + \mu_{c} x_{2}\right)^{4} \left(K_{c} - x_{3} + 1\right)^{4}}{\left(\sqrt[4]{C_{0}} \lambda_{c} x_{4} + \left(k_{c} + \mu_{c} x_{2}\right) \left(K_{c} - x_{3} + 1\right)\right)^{5}}\end{matrix}\right] $
 
     
     Отсюда видно, что градиент ни в какой точке не обращается в нуль, потому
@@ -586,6 +586,19 @@
     $ x_2' = - \frac{P_{0} \left(\left(k_{p} + \mu_{p}\right) \left(K_{p} k_{p} - K_{p} \lambda_{p} + x_{1} \left(k_{p} - \lambda_{p} + \mu_{p}\right)\right) + \left(K_{p} k_{p} - x_{1} \left(k_{p} + \mu_{p}\right)\right) \left(k_{p} - \lambda_{p} + \mu_{p}\right)\right)}{\left(K_{p} k_{p} - x_{1} \left(k_{p} + \mu_{p}\right)\right)^{2}} $
 
     
+    А точнее, \$ x\_2' = K\_p P\_0
+\dfrac{k_p\lambda_p + (k_p + \mu_p)(\lambda_p - 2k_p)} \{\left(K\_\{p\}
+k\_\{p\} - x\_\{1\} \left(k\_\{p\} + \mu\_\{p\}\right)\right)\^{}\{2\}\}
+\$
+
+Таким образом, в зависимости от параметров, производная либо строго
+меньше нуля, либо больше, либо функция постоянна. В любом случае,
+экстремальные значения будут достигаться на границе.
+
+\(\varphi_2(0) = P_0 \left( \frac{\lambda_p}{k_p} - 1\right);  \varphi_2(+\!\infty) = 1 - \frac{\lambda_p}{k_p + \mu_p}\;\)
+(на универсальном сечении, очевидно, \(\varphi_2\) является функцией
+только \(x_1\)).
+
     $ \text{Явное выражение для } x_3: $
 
     
@@ -620,6 +633,30 @@
     \hypertarget{ux43fux43eux441ux442ux440ux43eux435ux43dux438ux435-ux43fux43eux441ux43bux435ux434ux43eux432ux430ux442ux435ux43bux44cux43dux43eux441ux442ux438-ux43bux43eux43aux430ux43bux438ux437ux443ux44eux449ux438ux445-ux444ux443ux43dux43aux446ux438ux439-ux438-ux43cux43dux43eux436ux435ux441ux442ux432}{%
 \subsection{Построение последовательности локализующих функций и
 множеств}\label{ux43fux43eux441ux442ux440ux43eux435ux43dux438ux435-ux43fux43eux441ux43bux435ux434ux43eux432ux430ux442ux435ux43bux44cux43dux43eux441ux442ux438-ux43bux43eux43aux430ux43bux438ux437ux443ux44eux449ux438ux445-ux444ux443ux43dux43aux446ux438ux439-ux438-ux43cux43dux43eux436ux435ux441ux442ux432}}
+
+    Мы смогли получить все 4 координатные функции. Каждая координатная
+функция определяет, таким образом, соответствующее локализующее
+множество \(\Omega_i\), полученное из \(\overline{\mathbb{R}_{+}^{4}}\)
+следующим образом (далее всюду подразумеваются подмножества
+\(\overline{\mathbb{R}_{+}^{4}}\)): \begin{equation*}    
+    \begin{matrix}
+    \Omega_1 = \left\{
+            x \;|\; x_1 \in \left[ 0, C_0  \right]
+                \right\};
+    &
+    \Omega_2 = \left\{
+            x \;|\; x_2 \in \left[ \varphi_{2 \inf}, \varphi_{2 \sup}  \right] \vee x_2 = 0
+                \right\}
+    \\ \\
+    \Omega_3 = \left\{
+        x \;|\; x_3 \in \left[ 0, \dfrac{k_r}{\lambda_r}  \right]
+            \right\};
+    &
+    \Omega_4 = \left\{
+        x \;|\; x_3 \in \left[ 0, \dfrac{k_t}{\lambda_t K_t} \right]
+            \right\};
+    \end{matrix}
+\end{equation*}
 
 
     % Add a bibliography block to the postdoc
